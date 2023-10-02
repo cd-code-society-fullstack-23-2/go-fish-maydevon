@@ -28,7 +28,7 @@ public class Player {
     public void resetWin(){
         winningStreak = 0;
     }
-
+    @Override
     public String toString(){
         return String.format("Name: %s, Wins: %d", name, winningStreak);
     }

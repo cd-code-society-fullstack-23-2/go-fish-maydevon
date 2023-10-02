@@ -25,11 +25,10 @@ public class CardPlayer extends Player{
         hand.addAll(cards);
     }
 
-    public ArrayList<Card> removeCards(Integer numberOfCards){
+    public ArrayList<Card> removeCards(Integer numberOfCards) {
         ArrayList<Card> cards = new ArrayList<>();
-        for(int x = 0; x < numberOfCards; x ++){
-            Card card = hand.remove(x);
-            cards.add(card);
+        for (int x = 0; x < numberOfCards && !hand.isEmpty(); x++) {
+            cards.add(hand.remove(0));
         }
         return cards;
     }
